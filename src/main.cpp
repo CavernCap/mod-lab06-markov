@@ -6,7 +6,7 @@
 const int NPREF = 2; // количество слов в префиксе
 const int MAXGEN = 1000; //объем текста на выходе
 
-int main(){
+int main() {
     std::ifstream input_stream("test.txt");
     std::string string, line;
     while (std::getline(input_stream, line)) {
