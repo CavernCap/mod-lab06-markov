@@ -1,3 +1,4 @@
+// Copyright 2024 Kapochkin Mikhail
 #pragma once
 #include <deque>
 #include <string>
