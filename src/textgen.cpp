@@ -9,7 +9,7 @@ void TextGen::set(std::map<prefix, std::vector<std::string>> states) {
 std::map<prefix, std::vector<std::string>> TextGen::get() {
     return statetab;
 }
-void TextGen::CreateStatetabPrefixes(std::string& inpstring, int prefamount) {
+void TextGen::CreateStatetabPrefixes(const std::string& inpstring, int prefamount) {
     std::istringstream input_text(inpstring);
     prefix current_prefix;
     std::string word;
