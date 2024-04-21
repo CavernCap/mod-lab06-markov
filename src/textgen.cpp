@@ -1,3 +1,4 @@
+// Copyright 2024 Kapochkin Mikhail
 #include "textgen.h"
 #include <sstream>
 #include <random>
