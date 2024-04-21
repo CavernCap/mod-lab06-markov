@@ -1,4 +1,4 @@
-// Copyright 2021 GHA Test Team
+// Copyright 2024 Kapochkin Mikhail
 #include <gtest/gtest.h>
 #include "../include/textgen.h"
 TEST(Test1, CheckPrefixInText) {
