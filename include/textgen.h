@@ -13,7 +13,7 @@ class TextGen {
  public:
     void set(std::map<prefix, std::vector<std::string>> states);
     std::map<prefix, std::vector<std::string>> get();
-    void CreateStatetabPrefixes(const std::string& inpstring, int prefamount);
+    void CreateStatetabPrefixes(const std::string& inpstr, int prefnum);
     std::string GenerateText(int generation_seed, int prefixes_amount);
 };
 
