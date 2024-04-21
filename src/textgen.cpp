@@ -13,18 +13,17 @@ void TextGen::CreateStatetabPrefixes(const std::string& inpstring, int prefamoun
     std::istringstream input_text(inpstring);
     prefix current_prefix;
     std::string word;
-
     for (int i = 0; i < prefamount; i++) {
         input_text >> word;
-	    current_prefix.push_back(word);
-	}
+        current_prefix.push_back(word);
+    }
 
     first_prefix = current_prefix;
     while (input_text >> word) {
-	    statetab[current_prefix].push_back(word);
-	    current_prefix.push_back(word);
-	    current_prefix.pop_front();
-	}
+        statetab[current_prefix].push_back(word);
+	current_prefix.push_back(word);
+	current_prefix.pop_front();
+    }
 }
 std::string TextGen::GenerateText(int generation_seed, int MAXGEN) {
     std::mt19937 mt(time(nullptr));
@@ -35,7 +34,7 @@ std::string TextGen::GenerateText(int generation_seed, int MAXGEN) {
     for (auto prefIt = current_prefix.begin();prefIt != current_prefix.end(); prefIt++) {
         text_for_output += *prefIterator + " ";
         MAXGEN--;
-	}
+    }
     for (int i = 0; i < MAXGEN; i++) {
 	    if (statetab.find(current_prefix) == statetab.end()) break;
 	    randomNumber = mt() % statetab[current_prefix].size();
@@ -43,6 +42,6 @@ std::string TextGen::GenerateText(int generation_seed, int MAXGEN) {
 	    text_for_output += new_prefix + " ";
 	    current_prefix.push_back(new_prefix);
 	    current_prefix.pop_front();
-	}
+    }
     return text_for_output;
 }
