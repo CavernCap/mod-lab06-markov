@@ -32,7 +32,7 @@ std::string TextGen::GenerateText(int generation_seed, int MAXGEN) {
     prefix curpref = first_prefix;
     std::string new_prefix;
     for (auto prefIt = curpref.begin(); prefIt != curpref.end(); prefIt++) {
-        text_for_output += *prefIterator + " ";
+        text_for_output += *prefIt + " ";
         MAXGEN--;
     }
     for (int i = 0; i < MAXGEN; i++) {
